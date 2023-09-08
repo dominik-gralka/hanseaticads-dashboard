@@ -1,14 +1,22 @@
-import NextAuth, { NextAuthOptions } from 'next-auth';
-import GithubProvider from 'next-auth/providers/github';
-import GoogleProvider from 'next-auth/providers/google';
+import NextAuth from "next-auth"
+import EmailProvider from "next-auth/providers/email"
+import { MongoDBAdapter } from "@auth/mongodb-adapter"
+import clientPromise from "../../../lib/mongodb/client"
 
-export const authOptions: NextAuthOptions = {
+export default NextAuth({
+  secret: process.env.NEXTAUTH_SECRET,
+  adapter: MongoDBAdapter(clientPromise),
   providers: [
-    GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID as string,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
-    }), 
+    EmailProvider({
+      server: {
+        host: process.env.EMAIL_SERVER_HOST,
+        port: process.env.EMAIL_SERVER_PORT,
+        auth: {
+          user: process.env.EMAIL_SERVER_USER,
+          pass: process.env.EMAIL_SERVER_PASSWORD
+        }
+      },
+      from: process.env.EMAIL_FROM
+    }),
   ],
-};
-
-export default NextAuth(authOptions);
+})
