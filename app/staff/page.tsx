@@ -1,6 +1,6 @@
 import { Card, Title, Text } from '@tremor/react';
-import { queryBuilder } from '../lib/planetscale';
-import Search from './search';
+import { getUserByEmail, queryBuilder } from './planetscale';
+import Search from '../search';
 import UsersTable from './table';
 
 export const dynamic = 'force-dynamic';
@@ -12,10 +12,12 @@ export default async function IndexPage({
 }) {
   const search = searchParams.q ?? '';
   const users = await queryBuilder
-    .selectFrom('users')
-    .select(['id', 'name', 'username', 'email'])
-    .where('name', 'like', `%${search}%`)
+    .selectFrom('staff')
+    .select(['id', 'email', 'role'])
+    .where('email', 'like', `%${search}%`)
     .execute();
+
+  getUserByEmail('gralka.dominik@gmail.com');
 
   return (
     <main className="p-4 md:p-10 mx-auto max-w-7xl">
