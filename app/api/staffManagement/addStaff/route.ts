@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
       )
       .execute();
 
-      return NextResponse.json({ message: email + ' erfolgreich entfernt' });
+      return NextResponse.json({ message: email + ' erfolgreich hinzugefügt' });
   } catch (error) {
     console.error('Error inserting user:', error);
     return NextResponse.json({ message: 'Error inserting user' }, { status: 500 });

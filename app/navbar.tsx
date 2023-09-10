@@ -10,8 +10,8 @@ import React from 'react';
 
 const navigation = [
   { name: 'Dashboard', href: '/' },
-  { name: 'Statistik', href: '/playground' },
-  { name: 'Mitarbeiterverwaltung', href: '/staff' }
+  { name: 'Mitarbeiterverwaltung', href: '/staff' },
+  { name: 'Akquise', href: '/akquise' },
 ];
 
 function classNames(...classes: string[]) {

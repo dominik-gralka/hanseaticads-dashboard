@@ -70,18 +70,6 @@ export default function InsertTable() {
     }
   }
 
-  async function getAllUsers() {
-
-    const url_getStaff = window.location.origin + '/api/staffManagement/getStaff'
-
-    let a_response = await axios.get(
-      'http://localhost:3000/api/staffManagement/getStaff'
-    );
-
-    return a_response.data
-
-  }
-
   return (
     <div>
       {response && (
