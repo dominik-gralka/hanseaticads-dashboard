@@ -1,8 +1,9 @@
 import NextAuth from "next-auth/next";
 import GoogleProvider from "next-auth/providers/google";
 import { getUserByEmail } from "../../../staff/planetscale";
+import { NextAuthOptions } from "next-auth";
 
-const authOptions = {
+const authOptions:NextAuthOptions = {
     providers: [
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID ?? "",
@@ -24,6 +25,6 @@ const authOptions = {
       }
 }
 
-export const handler = NextAuth(authOptions);
+const handler = NextAuth(authOptions);
 
 export { handler  as GET, handler as POST};
