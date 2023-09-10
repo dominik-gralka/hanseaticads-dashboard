@@ -14,7 +14,7 @@ import {
 } from '@tremor/react';
 import axios from 'axios';
 
-export default async function InsertTable() {
+export default function InsertTable() {
   // State for input fields
   const [email, setEmail] = useState('');
   const [role, setRole] = useState('basic'); // Default role is 'basic'
@@ -68,6 +68,18 @@ export default async function InsertTable() {
       );
       setResponse(a_response.data.message);
     }
+  }
+
+  async function getAllUsers() {
+
+    const url_getStaff = window.location.origin + '/api/staffManagement/getStaff'
+
+    let a_response = await axios.get(
+      'http://localhost:3000/api/staffManagement/getStaff'
+    );
+
+    return a_response.data
+
   }
 
   return (

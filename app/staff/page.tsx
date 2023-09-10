@@ -20,9 +20,9 @@ export default async function IndexPage({
 
   return (
     <main className="p-4 md:p-10 mx-auto max-w-7xl">
-      <Title>Users</Title>
+      <Title>Mitarbeiterverwaltung</Title>
       <Text>
-        A list of users retrieved from a MySQL database (PlanetScale).
+        Übersicht aller Mitarbeiter:innen, die Zugriff auf das Dashboard haben.
       </Text>
       <div className="w-full flex justify-between items-center">
         <Search />
