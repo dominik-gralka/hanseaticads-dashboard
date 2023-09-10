@@ -1,9 +1,8 @@
 import NextAuth from "next-auth/next";
 import GoogleProvider from "next-auth/providers/google";
 import { getUserByEmail } from "../../../staff/planetscale";
-import { NextAuthOptions } from "next-auth";
 
-const authOptions:NextAuthOptions = {
+const authOptions = {
     providers: [
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID ?? "",
