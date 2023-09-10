@@ -20,7 +20,7 @@ export default function UsersTable({ users }: { users: User[] }) {
       <TableHead>
         <TableRow>
           <TableHeaderCell>Email</TableHeaderCell>
-          <TableHeaderCell>Role</TableHeaderCell>
+          <TableHeaderCell>Gruppe</TableHeaderCell>
         </TableRow>
       </TableHead>
       <TableBody>
@@ -36,5 +36,6 @@ export default function UsersTable({ users }: { users: User[] }) {
         ))}
       </TableBody>
     </Table>
+
   );
 }

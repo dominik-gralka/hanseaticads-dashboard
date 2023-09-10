@@ -11,7 +11,7 @@ import React from 'react';
 const navigation = [
   { name: 'Dashboard', href: '/' },
   { name: 'Statistik', href: '/playground' },
-  { name: 'Mitarbeiterverwaltung', href: '/staff' },
+  { name: 'Mitarbeiterverwaltung', href: '/staff' }
 ];
 
 function classNames(...classes: string[]) {
@@ -30,24 +30,19 @@ export default function Navbar({ user }: { user: any }) {
               <div className="flex">
                 <div className="flex flex-shrink-0 items-center">
                   <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    className="text-gray-100"
                     xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 35 35"
+                    fill="none"
                   >
-                    <rect
-                      width="100%"
-                      height="100%"
-                      rx="16"
-                      fill="currentColor"
-                    />
+                    <rect width="35" height="35" fill="#D9D9D9" />
+                    <rect width="35" height="16.52" fill="#005055" />
+                    <rect y="17.99" width="35" height="17.01" fill="#0047FF" />
+                    <circle cx="25.9351" cy="17.465" r="9.065" fill="#FFE500" />
                     <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
-                      fill="black"
+                      d="M0 0C9.31704 0 16.87 7.55295 16.87 16.87V35H0V0Z"
+                      fill="#00FF85"
                     />
                   </svg>
                 </div>

@@ -1,6 +1,6 @@
 import NextAuth from 'next-auth/next';
 import GoogleProvider from 'next-auth/providers/google';
-import { getUserByEmail } from '../../../staff/planetscale';
+import { getUserByEmail, getUserGroupByEmail } from '../../../staff/planetscale';
 
 const authOptions = {
   providers: [
@@ -19,12 +19,13 @@ const authOptions = {
     async signIn(params: any) {
       const { email } = params.user;
       const user = await getUserByEmail(email);
-      if (!user) {
-        return false;
+      if (user) {
+        return true;
       }
-      return true;
+
+      return false;
     }
-  }
+  },
 };
 
 const handler = NextAuth(authOptions);
