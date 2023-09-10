@@ -9,7 +9,7 @@ interface User {
 }
 
 interface Database {
-  users: User;
+  staff: User;
   // https://github.com/nextauthjs/next-auth/issues/4922
 }
 
@@ -19,7 +19,7 @@ export const queryBuilder = new Kysely<Database>({
   })
 });
 
-export async function getUserByEmail(email: string): Promise<User | null> {
+export async function getUserByEmail(email: string) {
   try {
     // Execute a query to fetch the user by email from the "users" table
     const users = await queryBuilder
