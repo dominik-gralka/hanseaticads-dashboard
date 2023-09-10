@@ -15,7 +15,7 @@ const authOptions = {
         }),
     ],
     callbacks: {
-        async signIn({ account, profile }) {
+        async signIn({ account, profile } : { account: any, profile: any }) {
           if (account.provider === "google") {
             return getUserByEmail(profile.email);
           }
