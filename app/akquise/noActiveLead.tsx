@@ -10,7 +10,7 @@ export default function NoActiveLead() {
           <Title>Aktiver Lead</Title>
           <Text>Sie sind aktuell keinem Betrieb zugewiesen</Text>
         </div>
-        <button className='w-auto h-12 bg-emerald-600 hover:bg-emerald-700 rounded-md text-white transition-all px-10'>Kontakt anfragen</button>
+        <button className='w-auto h-12 bg-emerald-600 hover:bg-emerald-700 rounded-md text-white transition-all px-10 font-mono'>Kontakt anfragen</button>
       </div>
 
       <div className="blur-md select-none">
