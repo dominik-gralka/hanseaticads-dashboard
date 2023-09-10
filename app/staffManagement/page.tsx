@@ -11,7 +11,7 @@ export default async function IndexPage() {
     <main className="p-4 md:p-10 mx-auto max-w-7xl">
       <Title>Mitarbeiterverwaltung</Title>
       <Text>
-        A list of users retrieved from a MySQL database (PlanetScale).
+        Übersicht aller Mitarbeiter:innen, die Zugriff auf das Dashboard haben.
       </Text>
 
       <InsertTable />
