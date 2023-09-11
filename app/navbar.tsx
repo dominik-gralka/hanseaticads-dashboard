@@ -98,7 +98,7 @@ export default function Navbar({ user }: { user: any }) {
                               )}
                               onClick={() => signOut()}
                             >
-                              Sign out
+                              Abmelden
                             </button>
                           )}
                         </Menu.Item>
@@ -112,7 +112,7 @@ export default function Navbar({ user }: { user: any }) {
                               )}
                               onClick={() => signIn()}
                             >
-                              Sign in
+                              Anmelden
                             </button>
                           )}
                         </Menu.Item>
